@@ -1,0 +1,18 @@
+import pandas as pd 
+import matplotlib.pyplot as plt 
+
+data = {
+		"Name": ["A", "B", "C", "D", "E"],
+		"Age": [20, 21, None, 22, 21],
+		"Marks": [85, 90, 78, None, 88]
+}
+
+df = pd.DataFrame(data)
+
+df["Age"].fillna(df["Age"].mean(), inplace=True)
+df["Marks"].fillna(df["Marks"].mean(), inplace=True
+
+print(df)
+
+plt.bar(df["Name"], df["Marks"])
+plt.show()
